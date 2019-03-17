@@ -2,6 +2,14 @@
 Modules Used: pynput, pygame
 Libraries Used: keyboard, mixer
 """
+
+#To check if the file has been unzipped or not
+import zipfile
+import os
+if  os.path.isfile('./Major.mp3')==False or os.path.isfile('./Starboy.mp3')==False:
+    zip_ref = zipfile.ZipFile("audios.zip", 'r')
+    zip_ref.extractall()
+    zip_ref.close()
 #Taking keyboard input
 from pynput import keyboard
 #For audio files
