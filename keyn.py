@@ -1,15 +1,13 @@
-"""An automated script to let user to select song of their choice, accessed via number inputs.
-Modules Used: pynput, pygame
-Libraries Used: keyboard, mixer
+"""An automated script to let user to select song of their choice, accessed via number inputs ranging between 1 and 10.
+Modules Used: pygame, mixer, os
+Libraries Used: pynput, keyboard
 """
 
-#To check if the file has been unzipped or not
-import zipfile
 import os
-if  os.path.isfile('./Major.mp3')==False or os.path.isfile('./Starboy.mp3')==False:
-    zip_ref = zipfile.ZipFile("audios.zip", 'r')
-    zip_ref.extractall()
-    zip_ref.close()
+file = os.listdir('./')
+mp3files = list(filter(lambda f: f.endswith('.mp3') ,file))
+# print(mp3files)
+
 #Taking keyboard input
 from pynput import keyboard
 #For audio files
@@ -29,24 +27,26 @@ def on_release(key):
     print('{0} released'.format(key))
 
     #For space, alt, shift, backspace,caps,  enter, fucntion key, ctlr
-    #TODO: To let the input be in
     if key == keyboard.Key.space or key == keyboard.Key.ctrl_r or key == keyboard.Key.ctrl_l or key ==keyboard.Key.alt or key == keyboard.Key.caps_lock or key == keyboard.Key.alt_l or key == keyboard.Key.alt_r or key==keyboard.Key.backspace or key == keyboard.Key.shift_l or key == keyboard.Key.shift_r or key == keyboard.Key.shift or key == keyboard.Key.enter or key == keyboard.Key.down or key == keyboard.Key.up or key == keyboard.Key.right or key == keyboard.Key.left or key == keyboard.Key.num_lock or key == keyboard.Key.page_down or key == keyboard.Key.page_up or key == keyboard.Key.home or key == keyboard.Key.end or key == keyboard.Key.insert or key == keyboard.Key.delete or key == keyboard.Key.tab:
         return True
 
-    #TODO: To terminate the program
-    #For escpae 
+    #For escape 
     if key == keyboard.Key.esc:
-        # Stop listener
         return False
+    global mp3files
+    lists=[]
+    for i in range(0, 11):
+        lists.append(str(i))
     if key.char:
-        if key.char == '1':
-            mixer.music.load("Starboy.mp3")
-            mixer.music.play()
-        elif key.char == '2':
-            mixer.music.load("Major.mp3")
-            mixer.music.play()
+        if key.char in lists:
+            if int(key.char)<len(mp3files):
+                mixer.music.load(mp3files[int(key.char)])
+                mixer.music.play()
+        else:
+            pass
+    else:
+        pass
 
-#TODO: Access the input
 # Collect events until released
 with keyboard.Listener(on_press=on_press,on_release=on_release) as listener:
     listener.join()
