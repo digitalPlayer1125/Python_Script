@@ -1,1 +1,1 @@
-py -3 keyn.py
+py -3 script-1.py
