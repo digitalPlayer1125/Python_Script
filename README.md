@@ -13,3 +13,7 @@ While doing any kinda work, one can press 0, 1, 2, ..., 9 to play the song.
 # Script - 2
  A python script using winsound, to produce beeps on press of keys. This is for ensuring that a key has been pressed.
 The file autobeep.bat is the windows batch file, which automatically runs the python script Script-2.py after the startup of the computer.
+
+# CropImage
+A python based Image Cropper.
+Run the cropper.py file to sit back and let the images be cropped.
