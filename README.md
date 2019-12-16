@@ -1,9 +1,6 @@
-# Python_Script
-Collection of some of my Python scripts.
-
 ## About this Repository
 
-This repo contains the java code compiled in IntelliJ IDEA for a working assembler:
+This repo my python scripts on the following:
 
 |Directory               |Component|
 |------------------------|-----------------------------------------------|
