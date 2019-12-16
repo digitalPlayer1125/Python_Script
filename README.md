@@ -1,6 +1,7 @@
 ## About this Repository
 
 This repo my python scripts on the following:
+![logo](<img src="https://img.icons8.com/color/16/000000/python.png">)
 
 |Directory               |Component|
 |------------------------|-----------------------------------------------|
@@ -21,13 +22,13 @@ to contribute to this:
 
 2. Clone your fork:
     
-    `git clone https://github.com/<username>/ground-platform.git`
+    `git clone https://github.com/<username>/Python_Script.git`
     
     Where `<username>` is your github username.
 
 3. Add the base repository as a remote:
     
-    `git remote add upstream https://github.com/google/ground-platform.git`
+    `git remote add upstream https://github.com/digitalPlayer1125/Python_Script.git`
 
 4. Follow the instructions in the README files of each of the directories listed under [About this Repository](#about-this-repository) section of this readme to set up your development environment.
 
@@ -77,12 +78,7 @@ submit them to the base repository using a pull request.
     Where `<branch>` is the branch name you used in step 2.
 
 1. Create a [pull request](https://help.github.com/articles/about-pull-requests/) to have your changes reviewed and merged into the base 
-repository. Reference the [issue](https://github.com/google/ground-platform/issues) your changes resolve in either the commit message for your changes or in your pull request. 
-
-    > :exclamation: Any subsequent changes committed to the branch you used
-    > to open your PR are automatically included in the PR. If you've opened a
-    > PR but would like to continue to work on unrelated changes, be sure to
-    > start a new branch to track those changes.
+repository.
 
     For more information on creating pull requests, see <https://help.github.com/articles/creating-a-pull-request/>. 
     
