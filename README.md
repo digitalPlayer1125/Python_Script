@@ -1,7 +1,8 @@
 ## About this Repository
 
+![logo](https://img.icons8.com/color/64/000000/python.png)
+
 This repo my python scripts on the following:
-![logo](https://img.icons8.com/color/16/000000/python.png)
 
 |Directory               |Component|
 |------------------------|-----------------------------------------------|
